@@ -1,0 +1,33 @@
+<!-- <h3 [class.pd-10]="true" [class.text-red]="true">
+  Chào mừng đến với khóa học lập trình angularjs
+</h3>
+
+
+
+<h3 [ngClass]="['pd-10', 'text-red']">
+  bind trực tiếp
+  Chào mừng đến với khóa học lập trình angularjs
+</h3>
+
+
+<h3 [ngClass]="{'pd-10 text-red' : isSpecial}">
+  bind điều kiện
+  Chào mừng đến với khóa học lập trình angularjs
+</h3> -->
+
+
+<h2>ng Style</h2>
+
+
+<h3 [ngStyle]="{'border': isSpecial ? 'solid 2px blue' :'', 'padding.px': '10'}">
+  Chào mừng đến với khóa học lập trình angularjs
+  condition not working with es6 &&
+</h3>
+
+
+<h3 [ngStyle]="setStyles()">
+  Chào mừng đến với khóa học lập trình angularjs
+  condition not working with es6 &&
+</h3>
+
+<button (click)="onToggle()">Toggle</button>
