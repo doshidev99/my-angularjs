@@ -14,6 +14,7 @@ import { ProductComponent } from './components/product/product.component';
 import { AttributeComponent } from './components/attribute/attribute.component';
 import { InputComponent } from './components/input/input.component';
 import { ChildComponent } from './components/child/child.component';
+import { StarsComponent } from './components/stars/stars.component';
 
 // auto import
 @NgModule({
@@ -28,7 +29,8 @@ import { ChildComponent } from './components/child/child.component';
     ProductComponent,
     AttributeComponent,
     InputComponent,
-    ChildComponent
+    ChildComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
   <div class="card-body">
     <div class="row mb-2">
       <label class="col-2">Filter:</label>
-      <input type="text" class="col-3" [(ngModel)]='filterValue' (input)='filter()'>
+      <input type="text" class="col-3" [(ngModel)]='listFilter'>
       <div class="col-7"></div>
     </div>
     <div class="row mb-4">
@@ -28,15 +28,7 @@
           <td>{{p.releaseDate}}</td>
           <td>{{p.price}}</td>
           <td>
-            <div class="crop" [style.width.px]="p.starRating*90/5" title="rating">
-              <div style="width: 90px">
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-            </div>
+            <app-stars [rating] = "p.starRating" ></app-stars>
           </td>
         </tr>
       </thead>

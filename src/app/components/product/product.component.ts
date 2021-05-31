@@ -64,12 +64,24 @@ export class ProductComponent implements OnInit {
   ];
 
   filterValue: string = '';
-
+  _listFilter: string = '';
   ngOnInit() {
     this.products = this.products;
   }
 
-  filter() {
-    this.products = this.products.filter(p => p.productName.includes(this.filterValue));
+  get listFilter(): string {
+    return this._listFilter;
+  }
+
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.products = this.listFilter ?
+      this.performFilter(this.listFilter) : this.products;
+  }
+
+  performFilter(filterBy: string): Product[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.products.filter((products: Product) =>
+      products.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
   }
 }
