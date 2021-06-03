@@ -26,7 +26,7 @@
           <td [class.text-blue]="true">
             <a href="products/{{p.productId}}"> {{ p.productName | uppercase }}</a>
           </td>
-          <td>{{p.productCode}}</td>
+          <td>{{p.productCode | uppercase}}</td>
           <td>{{p.releaseDate}}</td>
           <td>{{p.price | currency}}</td>
           <td>
