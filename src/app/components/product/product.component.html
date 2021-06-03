@@ -24,13 +24,13 @@
         <tr *ngFor='let p of products'>
           <td><img src="{{p.imageUrl}}" width="50px"></td>
           <td [class.text-blue]="true">
-            <a href="products/{{p.productId}}">{{p.productName}}</a>
+            <a href="products/{{p.productId}}"> {{ p.productName | uppercase }}</a>
           </td>
           <td>{{p.productCode}}</td>
           <td>{{p.releaseDate}}</td>
-          <td>{{p.price}}</td>
+          <td>{{p.price | currency}}</td>
           <td>
-            <app-stars [rating] = "p.starRating" ></app-stars>
+            <app-stars [rating]="p.starRating"></app-stars>
           </td>
         </tr>
       </thead>
