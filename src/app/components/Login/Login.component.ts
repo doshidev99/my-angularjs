@@ -8,9 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  @ViewChild('loginForm')
-
-  loginForm!: NgForm;
+  @ViewChild('myLogin')
+  myLogin!: NgForm;
 
   constructor() { }
 
@@ -20,7 +19,7 @@ export class LoginComponent implements OnInit {
   // onSubmit(contactForm: NgForm) {
   onSubmit() {
     // console.log(contactForm.value)
-    console.log(this.loginForm.value)
+    console.log(this.myLogin.value, '--myLogin')
   }
 
   onSuggest() {

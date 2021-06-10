@@ -1,0 +1,30 @@
+<h2>Login to System Suggestion</h2>
+
+<form id="loginForm" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+  <div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      #email="ngModel"
+      [(ngModel)]="state.email"
+      required
+    />
+
+    <button type="button" class="btn" (click)="onSuggest()">Suggest</button>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input
+      class="form-control"
+      type="password"
+      name="password"
+      #password="ngModel"
+      [(ngModel)]="state.password"
+      required
+      minLength="6"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>

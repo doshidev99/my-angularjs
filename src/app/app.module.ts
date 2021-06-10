@@ -9,6 +9,7 @@ import { AdminRoutes } from 'src/routes/admin.routing';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductComponent } from './components/product/product.component';
 import { LoginComponent } from './components/Login/Login.component';
+import { FormBindingComponent } from './components/FormBinding/FormBinding.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,7 @@ const routes: Routes = [
     HeaderComponent,
     NotfoundComponent,
     ProductComponent,
-    LoginComponent
+    LoginComponent, FormBindingComponent
   ],
   imports: [
     BrowserModule,
